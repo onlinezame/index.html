@@ -1,53 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jagadish Timilsina — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: {
+              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 bg-slate-950/80 backdrop-blur border-b border-white/10 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <img src="https://raw.githubusercontent.com/onlinezame/my-image/main/IMG_8623.jpg" alt="Logo" class="h-12 w-12 rounded-full object-cover border-2 border-primary-600 shadow-md" loading="eager" referrerpolicy="no-referrer" />
+      <nav class="space-x-6 text-sm text-slate-300">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#ventures" class="hover:text-white">Ventures</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<!DOCTYPE html>
-<html data-theme="base44" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f4c150ebb840832781998a/902fb640e_logo.png" rel="icon"/>
-  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
-  <meta content="#000000" name="theme-color"/>
-  <meta content="Your professional portfolio showcasing expertise in HR management, educational consulting, and business ventures." name="description"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
-  <meta content="Base44" name="apple-mobile-web-app-title"/>
-  <link href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f4c150ebb840832781998a/902fb640e_logo.png" rel="apple-touch-icon"/>
-  <link href="https://elevate-hr-2781998a.base44.app/manifest.json" rel="manifest">
-   <title>
-    ElevateHR
-   </title>
-   <script src="https://cdn.tailwindcss.com">
-   </script>
-   <meta content="website" property="og:type">
-    <meta content="https://elevate-hr-2781998a.base44.app" property="og:url">
-     <meta content="ElevateHR" property="og:title">
-      <meta content="Your professional portfolio showcasing expertise in HR management, educational consulting, and business ventures." property="og:description"/>
-      <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f4c150ebb840832781998a/902fb640e_logo.png" property="og:image"/>
-      <meta content="summary_large_image" property="twitter:card"/>
-      <meta content="https://elevate-hr-2781998a.base44.app" property="twitter:url"/>
-      <meta content="ElevateHR" property="twitter:title"/>
-      <meta content="Your professional portfolio showcasing expertise in HR management, educational consulting, and business ventures." property="twitter:description"/>
-      <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f4c150ebb840832781998a/902fb640e_logo.png" property="twitter:image"/>
-      <script>
-       !function(n,u){n._rwq=u,n[u]=n[u]||function(){(n[u].q=n[u].q||[]).push(arguments)}}(window,"rewardful")
-      </script>
-      <script async="" data-rewardful="0259ba" src="https://r.wdfl.co/rw.js">
-      </script>
-      <script defer="defer" src="/static/js/vendors.b2bf4b8a.js">
-      </script>
-      <script defer="defer" src="/static/js/main.d2910dcb.js">
-      </script>
-      <link href="/static/css/vendors.77bf307e.css" rel="stylesheet"/>
-      <link href="/static/css/main.05d7bbe0.css" rel="stylesheet"/>
-     </meta>
-    </meta>
-   </meta>
-  </link>
- </head>
- <body>
-  <noscript>
-   You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root">
-  </div>
- </body>
+  <!-- HERO SECTION -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center px-6 py-20 overflow-hidden">
+    <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-5xl font-bold leading-tight mb-4">Jagadish Timilsina</h2>
+        <p class="text-lg text-slate-200 mb-6">HR Operations Expert · Educational Counsellor · Accountant</p>
+        <p class="text-slate-300 max-w-md mb-8">Founder of OZ45 LLC (E-commerce, since 2020) and Global Application Partner (Educational Consultancy, since 2024). Passionate about building systems that blend finance, education, and people strategy.</p>
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-6 py-3 font-semibold hover:bg-primary-500">Contact Me</a>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <img src="https://raw.githubusercontent.com/onlinezame/my-image/main/IMG_8623.jpg" alt="Jagadish Timilsina" class="w-96 h-auto rounded-2xl object-cover border-4 border-primary-600 shadow-xl" loading="eager" referrerpolicy="no-referrer" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="border-t border-white/10 px-6 py-20 bg-slate-950/90">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p class="text-slate-300 mb-4">My professional journey began in the finance and accounting sector within the travel industry, where I developed a strong foundation in numbers, analysis, and business operations. This early experience refined my attention to detail and gave me a solid grasp of corporate finance and operational structures.</p>
+      <p class="text-slate-300 mb-4">Over time, I transitioned into educational counselling and HR management — two domains that allowed me to connect with people and help them grow. As an Educational Counsellor, I’ve advised countless students in achieving global academic goals, guiding them toward reputable institutions in Canada, Europe, and the UAE. Later, my work in HR strengthened my leadership in workforce development, recruitment, and strategic human capital management.</p>
+      <p class="text-slate-300 mb-4">Parallel to these roles, I have been actively engaged in the IT and e-commerce space. Through OZ45 LLC, I’ve explored how digital tools, automation, and creative design can enhance business ecosystems. I combine analytical discipline from my finance background with creative and imaginative thinking to turn complex ideas into functional realities.</p>
+      <p class="text-slate-400">Today, I bring together finance, HR, education, and technology — creating solutions that merge structure with creativity. My strength lies in transforming vision into execution through practical innovation, grounded leadership, and a forward-looking mindset.</p>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section id="ventures" class="border-t border-white/10 bg-slate-900/40 px-6 py-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-2">Ventures</h3>
+      <p class="text-slate-300 mb-10">Current businesses and focus areas</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 text-left">
+          <h4 class="text-xl font-semibold mb-2">OZ45 LLC — Founded 2020</h4>
+          <p class="text-slate-400 mb-3">An e-commerce venture focused on digital product ecosystems, marketplace integrations, and scalable operations.</p>
+          <a href="#contact" class="text-primary-500 hover:underline text-sm">Connect for collaborations →</a>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 text-left">
+          <h4 class="text-xl font-semibold mb-2">Global Application Partner — Founded 2024</h4>
+          <p class="text-slate-400 mb-3">An educational consultancy guiding international students to top universities in Canada, Europe, and the UAE.</p>
+          <a href="#contact" class="text-primary-500 hover:underline text-sm">Partner with us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="border-t border-white/10 px-6 py-20 bg-slate-950/90">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Let’s align your next milestone</h3>
+        <p class="text-slate-300 mb-6">Send a short brief with desired outcomes and constraints. You get a structured plan, not fluff.</p>
+        <div class="flex items-center gap-3 text-slate-300 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 8-9 13-9 13S3 18 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dubai, UAE</span>
+        </div>
+      </div>
+      <form class="rounded-2xl border border-white/10 bg-slate-900 p-8 shadow-soft" action="https://formsubmit.co/girentimilsina@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from portfolio contact page" />
+        <input type="hidden" name="_template" value="box" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" class="hidden" style="display:none" />
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="block text-sm">Name
+            <input required name="name" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-2 outline-none ring-primary-500 focus:ring" placeholder="Your name" />
+          </label>
+          <label class="block text-sm">Email
+            <input required type="email" name="email" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-2 outline-none ring-primary-500 focus:ring" placeholder="you@example.com" />
+          </label>
+        </div>
+        <label class="block text-sm mt-4">Message
+          <textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-2 outline-none ring-primary-500 focus:ring" placeholder="Short brief and outcomes…"></textarea>
+        </label>
+        <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-primary-600 px-5 py-3 font-semibold hover:bg-primary-500">
+          Send message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-6 text-sm text-slate-400">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/jagadishtimilsina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-white">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" class="h-6 w-6" />
+          <span class="hidden sm:inline">LinkedIn</span>
+        </a>
+        <a href="https://www.facebook.com/girentimilsina" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-white">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="h-6 w-6" />
+          <span class="hidden sm:inline">Facebook</span>
+        </a>
+      </div>
+      <div class="text-center flex-1">
+        © <span id="year"></span> Jagadish Timilsina. All rights reserved.
+      </div>
+      <div class="w-5"></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
