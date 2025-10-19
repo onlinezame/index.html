@@ -4,24 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jagadish Timilsina — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-          colors: {
-            primary: {
-              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8'
-            }
-          }
+          fontFamily: { sans: ['Handlee', 'cursive'] },
+          colors: { primary: { 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } }
         }
       }
     }
   </script>
+  <style>
+    body { font-family: 'Handlee', cursive; }
+    @keyframes twinkle { 0%,100% { opacity: .25 } 50% { opacity: 1 } }
+    .star { animation: twinkle 3.2s ease-in-out infinite; }
+    .star:nth-child(3n) { animation-duration: 4.4s; }
+    .star:nth-child(5n) { animation-duration: 5.6s; }
+
+    @keyframes floatSmooth { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .float-slow { animation: floatSmooth 5s ease-in-out infinite; }
+
+    @keyframes panX { to { transform: translateX(-50%); } }
+    .universe { position:absolute; inset:0; overflow:hidden; }
+    .starfield { width:200%; height:100%; display:flex; animation: panX 80s linear infinite; opacity:.9 }
+    .starfield.slow { animation-duration:140s; opacity:.6 }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
+<body class="bg-slate-950 text-slate-100 antialiased font-sans">
   <!-- NAVBAR -->
   <header class="sticky top-0 bg-slate-950/80 backdrop-blur border-b border-white/10 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
@@ -37,15 +48,24 @@
 
   <!-- HERO SECTION -->
   <section id="home" class="relative min-h-[90vh] flex items-center justify-center px-6 py-20 overflow-hidden">
-    <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-5xl font-bold leading-tight mb-4">Jagadish Timilsina</h2>
-        <p class="text-lg text-slate-200 mb-6">HR Operations Expert · Educational Counsellor · Accountant</p>
-        <p class="text-slate-300 max-w-md mb-8">Founder of OZ45 LLC (E-commerce, since 2020) and Global Application Partner (Educational Consultancy, since 2024). Passionate about building systems that blend finance, education, and people strategy.</p>
-        <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-6 py-3 font-semibold hover:bg-primary-500">Contact Me</a>
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 universe">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37,99,235,0.18),transparent_60%),radial-gradient(ellipse_at_bottom,_rgba(59,130,246,0.14),transparent_60%)]"></div>
+      <div class="starfield">
+        <svg viewBox="0 0 1200 800" class="w-full h-full"><g fill="white"><circle class="star" cx="80" cy="120" r="1.4"/></g></svg>
       </div>
-      <div class="flex justify-center md:justify-end">
-        <img src="https://raw.githubusercontent.com/onlinezame/my-image/main/IMG_8623.jpg" alt="Jagadish Timilsina" class="w-96 h-auto rounded-2xl object-cover border-4 border-primary-600 shadow-xl" loading="eager" referrerpolicy="no-referrer" />
+    </div>
+
+    <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
+      <div class="flex justify-center md:justify-start md:pl-12">
+        <img src="https://raw.githubusercontent.com/onlinezame/my-image/main/IMG_8623.jpg" alt="Jagadish Timilsina" class="float-slow w-96 h-auto rounded-2xl object-cover border-4 border-primary-600 shadow-xl" loading="eager" referrerpolicy="no-referrer" />
+      </div>
+      <div>
+        <h1 class="text-5xl font-bold leading-tight mb-4">Jagadish Timilsina</h1>
+        <p class="text-lg text-slate-200 mb-3">HR Operations Expert · Educational Counsellor · Accountant</p>
+        <p class="text-slate-300 max-w-md mb-8">Founder of OZ45 LLC (E-commerce, since 2020) and Global Application Partner (Educational Consultancy, since 2024). Passionate about building systems that blend finance, education, and people strategy.</p>
+        <div class="flex gap-4">
+          <a href="#contact" class="rounded-xl bg-primary-600 px-6 py-3 font-semibold hover:bg-primary-500">Contact Me</a>
+        </div>
       </div>
     </div>
   </section>
@@ -53,7 +73,7 @@
   <!-- ABOUT -->
   <section id="about" class="border-t border-white/10 px-6 py-20 bg-slate-950/90">
     <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
       <p class="text-slate-300 mb-4">My professional journey began in the finance and accounting sector within the travel industry, where I developed a strong foundation in numbers, analysis, and business operations. This early experience refined my attention to detail and gave me a solid grasp of corporate finance and operational structures.</p>
       <p class="text-slate-300 mb-4">Over time, I transitioned into educational counselling and HR management — two domains that allowed me to connect with people and help them grow. As an Educational Counsellor, I’ve advised countless students in achieving global academic goals, guiding them toward reputable institutions in Canada, Europe, and the UAE. Later, my work in HR strengthened my leadership in workforce development, recruitment, and strategic human capital management.</p>
       <p class="text-slate-300 mb-4">Parallel to these roles, I have been actively engaged in the IT and e-commerce space. Through OZ45 LLC, I’ve explored how digital tools, automation, and creative design can enhance business ecosystems. I combine analytical discipline from my finance background with creative and imaginative thinking to turn complex ideas into functional realities.</p>
@@ -64,17 +84,17 @@
   <!-- VENTURES -->
   <section id="ventures" class="border-t border-white/10 bg-slate-900/40 px-6 py-20">
     <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-2">Ventures</h3>
+      <h2 class="text-3xl font-bold mb-2">Ventures</h2>
       <p class="text-slate-300 mb-10">Current businesses and focus areas</p>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 text-left">
-          <h4 class="text-xl font-semibold mb-2">OZ45 LLC — Founded 2020</h4>
-          <p class="text-slate-400 mb-3">An e-commerce venture focused on digital product ecosystems, marketplace integrations, and scalable operations.</p>
+          <h3 class="text-xl font-semibold mb-2">OZ45 LLC — Founded 2020</h3>
+          <p class="text-slate-400 mb-4">E‑commerce venture focused on digital product ecosystems, marketplace integrations, and scalable operations.</p>
           <a href="#contact" class="text-primary-500 hover:underline text-sm">Connect for collaborations →</a>
         </div>
         <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 text-left">
-          <h4 class="text-xl font-semibold mb-2">Global Application Partner — Founded 2024</h4>
-          <p class="text-slate-400 mb-3">An educational consultancy guiding international students to top universities in Canada, Europe, and the UAE.</p>
+          <h3 class="text-xl font-semibold mb-2">Global Application Partner — Founded 2024</h3>
+          <p class="text-slate-400 mb-4">Educational consultancy guiding international students to top universities in Canada, Europe, and the UAE.</p>
           <a href="#contact" class="text-primary-500 hover:underline text-sm">Partner with us →</a>
         </div>
       </div>
@@ -85,14 +105,14 @@
   <section id="contact" class="border-t border-white/10 px-6 py-20 bg-slate-950/90">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
       <div>
-        <h3 class="text-3xl font-bold mb-4">Let’s align your next milestone</h3>
+        <h2 class="text-3xl font-bold mb-4">Let’s align your next milestone</h2>
         <p class="text-slate-300 mb-6">Send a short brief with desired outcomes and constraints. You get a structured plan, not fluff.</p>
         <div class="flex items-center gap-3 text-slate-300 text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 8-9 13-9 13S3 18 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>Dubai, UAE</span>
         </div>
       </div>
-      <form class="rounded-2xl border border-white/10 bg-slate-900 p-8 shadow-soft" action="https://formsubmit.co/girentimilsina@gmail.com" method="POST">
+      <form class="rounded-2xl border border-white/10 bg-slate-900 p-8" action="https://formsubmit.co/girentimilsina@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New message from portfolio contact page" />
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_captcha" value="false" />
@@ -119,25 +139,47 @@
   <!-- FOOTER -->
   <footer class="border-t border-white/10 py-6 text-sm text-slate-400">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <a href="https://www.linkedin.com/in/jagadishtimilsina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-white">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" class="h-6 w-6" />
-          <span class="hidden sm:inline">LinkedIn</span>
+      <div class="flex items-center gap-6">
+        <a href="https://www.linkedin.com/in/jagadishtimilsina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="hover:opacity-80">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="h-6 w-6" />
         </a>
-        <a href="https://www.facebook.com/girentimilsina" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-white">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="h-6 w-6" />
-          <span class="hidden sm:inline">Facebook</span>
+        <a href="https://www.facebook.com/girentimilsina" target="_blank" rel="noopener" class="hover:opacity-80">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="h-6 w-6" />
+        </a>
+        <a href="https://wa.me/00971588025890" target="_blank" rel="noopener" class="hover:opacity-80">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="h-6 w-6" />
         </a>
       </div>
-      <div class="text-center flex-1">
-        © <span id="year"></span> Jagadish Timilsina. All rights reserved.
-      </div>
+      <div class="text-center flex-1">© <span id="year"></span> Jagadish Timilsina. All rights reserved.</div>
       <div class="w-5"></div>
     </div>
   </footer>
 
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-primary-600 text-white p-3 rounded-full shadow-lg hidden transition hover:bg-primary-500">
+    ↑
+  </button>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.remove('hidden');
+      } else {
+        scrollBtn.classList.add('hidden');
+      }
+    });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
