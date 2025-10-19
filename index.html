@@ -22,10 +22,8 @@
     .star { animation: twinkle 3.2s ease-in-out infinite; }
     .star:nth-child(3n) { animation-duration: 4.4s; }
     .star:nth-child(5n) { animation-duration: 5.6s; }
-
     @keyframes floatSmooth { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
     .float-slow { animation: floatSmooth 5s ease-in-out infinite; }
-
     @keyframes panX { to { transform: translateX(-50%); } }
     .universe { position:absolute; inset:0; overflow:hidden; }
     .starfield { width:200%; height:100%; display:flex; animation: panX 80s linear infinite; opacity:.9 }
@@ -33,7 +31,6 @@
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased font-sans">
-  <!-- NAVBAR -->
   <header class="sticky top-0 bg-slate-950/80 backdrop-blur border-b border-white/10 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
       <img src="https://raw.githubusercontent.com/onlinezame/my-image/main/IMG_8623.jpg" alt="Logo" class="h-12 w-12 rounded-full object-cover border-2 border-primary-600 shadow-md" loading="eager" referrerpolicy="no-referrer" />
@@ -46,7 +43,6 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section id="home" class="relative min-h-[90vh] flex items-center justify-center px-6 py-20 overflow-hidden">
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 universe">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37,99,235,0.18),transparent_60%),radial-gradient(ellipse_at_bottom,_rgba(59,130,246,0.14),transparent_60%)]"></div>
@@ -54,7 +50,6 @@
         <svg viewBox="0 0 1200 800" class="w-full h-full"><g fill="white"><circle class="star" cx="80" cy="120" r="1.4"/></g></svg>
       </div>
     </div>
-
     <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
       <div class="flex justify-center md:justify-start md:pl-12">
         <img src="https://raw.githubusercontent.com/onlinezame/my-image/main/IMG_8623.jpg" alt="Jagadish Timilsina" class="float-slow w-96 h-auto rounded-2xl object-cover border-4 border-primary-600 shadow-xl" loading="eager" referrerpolicy="no-referrer" />
@@ -70,7 +65,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="border-t border-white/10 px-6 py-20 bg-slate-950/90">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
@@ -81,7 +75,26 @@
     </div>
   </section>
 
-  <!-- VENTURES -->
+  <section id="expertise" class="border-t border-white/10 px-6 py-20 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Expertise</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
+          <h3 class="text-xl font-semibold mb-2">Finance & Accounting</h3>
+          <p class="text-slate-400">Strong analytical base built from early career in finance within the travel sector, mastering budgeting, reporting, and operations.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
+          <h3 class="text-xl font-semibold mb-2">Educational Counselling</h3>
+          <p class="text-slate-400">Advised hundreds of students for global higher education opportunities in Canada, USA, UK, Australia, Europe, and the UAE with personalized guidance.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
+          <h3 class="text-xl font-semibold mb-2">HR & People Operations</h3>
+          <p class="text-slate-400">Expertise in recruitment, workforce management, and strategic HR practices fostering growth and efficiency across teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="ventures" class="border-t border-white/10 bg-slate-900/40 px-6 py-20">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-2">Ventures</h2>
@@ -89,19 +102,18 @@
       <div class="grid md:grid-cols-2 gap-8">
         <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 text-left">
           <h3 class="text-xl font-semibold mb-2">OZ45 LLC — Founded 2020</h3>
-          <p class="text-slate-400 mb-4">E‑commerce venture focused on digital product ecosystems, marketplace integrations, and scalable operations.</p>
+          <p class="text-slate-400 mb-4">E-commerce venture focused on digital product ecosystems, marketplace integrations, and scalable operations.</p>
           <a href="#contact" class="text-primary-500 hover:underline text-sm">Connect for collaborations →</a>
         </div>
         <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 text-left">
           <h3 class="text-xl font-semibold mb-2">Global Application Partner — Founded 2024</h3>
-          <p class="text-slate-400 mb-4">Educational consultancy guiding international students to top universities in Canada, Europe, and the UAE.</p>
+          <p class="text-slate-400 mb-4">Educational consultancy guiding international students to top universities all over the globe.</p>
           <a href="#contact" class="text-primary-500 hover:underline text-sm">Partner with us →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="border-t border-white/10 px-6 py-20 bg-slate-950/90">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
       <div>
@@ -117,7 +129,6 @@
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="text" name="_honey" class="hidden" style="display:none" />
-
         <div class="grid gap-4 md:grid-cols-2">
           <label class="block text-sm">Name
             <input required name="name" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-2 outline-none ring-primary-500 focus:ring" placeholder="Your name" />
@@ -129,26 +140,17 @@
         <label class="block text-sm mt-4">Message
           <textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-2 outline-none ring-primary-500 focus:ring" placeholder="Short brief and outcomes…"></textarea>
         </label>
-        <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-primary-600 px-5 py-3 font-semibold hover:bg-primary-500">
-          Send message
-        </button>
+        <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-primary-600 px-5 py-3 font-semibold hover:bg-primary-500">Send message</button>
       </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="border-t border-white/10 py-6 text-sm text-slate-400">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       <div class="flex items-center gap-6">
-        <a href="https://www.linkedin.com/in/jagadishtimilsina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="hover:opacity-80">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="h-6 w-6" />
-        </a>
-        <a href="https://www.facebook.com/girentimilsina" target="_blank" rel="noopener" class="hover:opacity-80">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="h-6 w-6" />
-        </a>
-        <a href="https://wa.me/00971588025890" target="_blank" rel="noopener" class="hover:opacity-80">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="h-6 w-6" />
-        </a>
+        <a href="https://www.linkedin.com/in/jagadishtimilsina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="h-6 w-6" /></a>
+        <a href="https://www.facebook.com/girentimilsina" target="_blank" rel="noopener" class="hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="h-6 w-6" /></a>
+        <a href="https://wa.me/00971588025890" target="_blank" rel="noopener" class="hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="h-6 w-6" /></a>
       </div>
       <div class="text-center flex-1">© <span id="year"></span> Jagadish Timilsina. All rights reserved.</div>
       <div class="w-5"></div>
@@ -156,9 +158,7 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-primary-600 text-white p-3 rounded-full shadow-lg hidden transition hover:bg-primary-500">
-    ↑
-  </button>
+  <button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-primary-600 text-white p-3 rounded-full shadow-lg hidden transition hover:bg-primary-500">↑</button>
   <script>
     const scrollBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
